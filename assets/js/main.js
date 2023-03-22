@@ -39,3 +39,12 @@ const ourTeam = [
         photo: 'barbara-ramos-graphic-designer.jpg',
     }
 ];
+
+/* Stampare su console per ogni membro del team le informazioni */
+for (let i = 0; i < ourTeam.length; i++) {  //scorro attraverso l'array
+    const member = ourTeam[i];
+
+    for (const key in member) { //per ogni membro del Team mostro le proprietà
+        console.log(key, member[key]); //stampo in console
+    }
+}
