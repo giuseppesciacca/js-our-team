@@ -40,9 +40,23 @@ const ourTeam = [
     }
 ];
 
+const rowEl = document.querySelector('.row');
+
 /* Stampare su console per ogni membro del team le informazioni */
 for (let i = 0; i < ourTeam.length; i++) {  //scorro attraverso l'array
     const member = ourTeam[i];
+    //Stampare le informazioni su DOM in card
+    const cardMarkup = `
+                <div class="col">
+                    <div class="card">
+                        <img src="./assets/img/${member.photo}" alt="${member.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${member.name}</h5>
+                            <p class="card-text">${member.role}</p>
+                        </div>
+                    </div>
+                </div>`;
+    rowEl.innerHTML += cardMarkup;
 
     for (const key in member) { //per ogni membro del Team mostro le proprietà
         console.log(key, member[key]); //stampo in console
