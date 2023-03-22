@@ -1,0 +1,11 @@
+:root {
+    --bg-title: #e53170;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+h1 {
+    color: var(--bg-title);
+}
