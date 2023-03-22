@@ -47,15 +47,27 @@ for (let i = 0; i < ourTeam.length; i++) {  //scorro attraverso l'array
     const member = ourTeam[i];
     //Stampare le informazioni su DOM in card
     const cardMarkup = `
-                <div class="col">
-                    <div class="card">
-                        <img src="./assets/img/${member.photo}" alt="${member.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${member.name}</h5>
-                            <p class="card-text">${member.role}</p>
+            <div class="col-12 col-sm-4">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 col-xl-5 text-center">
+                            <img class="img-fluid card-img" src="./assets/img/${member.photo}" alt="${member.name}">
                         </div>
+                        <!-- ./col-12 col-lg-6 col-xl-5 -->
+
+                        <div class="col-12 col-lg-6 col-xl-7 text-white d-flex align-items-center">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold mb-1">${member.name}</h5>
+                                <p class="card-text mb-1">${member.role}</p>
+                            </div>
+                            <!-- ./card-body -->
+                        </div>
+                        <!-- ./col-12 col-lg-6 col-xl-7 -->
                     </div>
-                </div>`;
+                    <!-- ./intern row -->
+                </div>
+            </div>
+            <!-- /.col-12 col-sm-4 -->`;
     rowEl.innerHTML += cardMarkup;
 
     for (const key in member) { //per ogni membro del Team mostro le proprietà

@@ -1,5 +1,6 @@
 :root {
     --bg-title: #e53170;
+    --bg-primary-card: #0f0e17;
 }
 
 body {
@@ -8,4 +9,10 @@ body {
 
 h1 {
     color: var(--bg-title);
+}
+
+.card {
+    background-color: var(--bg-primary-card);
+    height: 100%;
+    box-shadow: 0 0 10px black;
 }
